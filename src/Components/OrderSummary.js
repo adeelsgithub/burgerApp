@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./Button.css"
 
 
 let orderSummary =(props)=>{  
@@ -15,7 +15,10 @@ let orderSummary =(props)=>{
             <ul>
                 {li}
             </ul>
+            <p><strong> TOTAL PRICE : {props.price.toFixed(2)}</strong></p>
             <p>Continue to Check out ?</p>
+            <button className={classes.Button +" "+ classes.Danger} onClick={props.hideButtonHandler}>CANCEL</button>
+            <button className={classes.Button +" "+ classes.Success} onClick={props.hideButtonHandler}>CONTINUE</button>
         </div>
     );
     

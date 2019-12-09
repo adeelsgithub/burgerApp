@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./burger.css";
 import BurgerIngredient from "./BurgerIngredient";
-
+import PropTypes from "prop-types";
 
 const burger = (props) => {
 
@@ -24,6 +24,10 @@ const burger = (props) => {
             <BurgerIngredient type="bread-bottom" />
         </div>
     );
+};
+
+burger.propTypes ={
+    ingredient : PropTypes.object
 };
 
 export default burger; 

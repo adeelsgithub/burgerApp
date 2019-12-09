@@ -26,6 +26,7 @@ let burgerControl = (props) =>{
             ))}
             <button className={classes.OrderButton}
             disabled={!props.purchasable}
+            onClick={props.show}
             >ORDER NOW</button>
         </div>
         

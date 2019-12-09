@@ -22,7 +22,8 @@ class BurgerBuilder extends React.Component{
             meat : 0
         },
         price : 2,
-        purchasable : false
+        purchasable : false,
+        showModel : false
     };
 
     purchasable(ingredient){
@@ -67,6 +68,16 @@ class BurgerBuilder extends React.Component{
         this.purchasable(updateCount);
     }}
 
+
+    showHandler = () =>{
+        this.setState({showModel : true});
+    }
+
+    hideHandlerModel = () =>{
+        this.setState({ showModel : false });
+    }
+
+
     render(){
         let disabledInfo = {...this.state.ingredients};
         
@@ -74,17 +85,20 @@ class BurgerBuilder extends React.Component{
             disabledInfo[key] = disabledInfo[key] <= 0
         }
        
-
         return (
             <React.Fragment>
-                <Model  ing={this.state.ingredients} />
+                <Model  ing={this.state.ingredients} 
+                show ={this.state.showModel}
+                hide={this.hideHandlerModel}
+                price={this.state.price}/>
                 <Burger ingredient={this.state.ingredients}/>
                 <BurgerControls  addHandler={this.addHandler}
                 deleteHandler={this.deleteHandler}
                 disabled = {disabledInfo}
                 price= {this.state.price}
                 purchasable={this.state.purchasable}
-                />
+                show={this.showHandler}
+               />
             </React.Fragment>
             
         );

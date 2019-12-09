@@ -10,7 +10,6 @@ class App extends React.Component{
     return (
       <React.Fragment>
         <Layout>
-          <p>I am a child on Layout. use me via this.props.childern</p>
           <BurgerBuilder/>          
         </Layout>
       </React.Fragment>
