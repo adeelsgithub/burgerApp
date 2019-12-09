@@ -1,0 +1,14 @@
+.navigationUl{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-flow: column;
+}
+
+@media(min-width:700px){
+    .navigationUl{
+        flex-flow: row;
+    }
+}
