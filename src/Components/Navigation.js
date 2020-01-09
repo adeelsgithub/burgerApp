@@ -5,8 +5,10 @@ import NavigationItems from "./NavigationItems";
 let navigation = () =>{
     return (
         <ul className={Classes.navigationUl}>
-            <NavigationItems link="\" item="Burger Builder"/>
-            <NavigationItems link="\" item="Contact Us"/>         
+            <NavigationItems link="/" item="Burger Builder"/>
+            <NavigationItems link={{
+                pathname: "/contact-us"
+            }} item="Contact Us"/>         
         </ul>
     );
 }
