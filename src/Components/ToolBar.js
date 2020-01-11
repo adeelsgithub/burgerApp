@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./toolBar.css";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
-import {Route} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 
 let toolBar = (props) =>{
     return (
@@ -16,7 +16,10 @@ let toolBar = (props) =>{
             <nav className={classes.desktopOnly}>
                 <Navigation />               
             </nav>
-            <Route path="/" exact render={()=> <h1>Contact-Us</h1>}/>
+            <Switch>
+                <Route path="/" exact render={()=> <h1>Contact-Us</h1>}/>
+            </Switch>
+            
         </header>
     );
 
