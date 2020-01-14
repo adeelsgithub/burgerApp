@@ -1,6 +1,6 @@
 # Burger App
 
-This project was created using Create React App , Css and React 
+This project was created using Create React App , Css and React.js
 
 ### Available Scripts
 
